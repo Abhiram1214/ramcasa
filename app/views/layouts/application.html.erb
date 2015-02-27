@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ramcasa</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Treebook</title>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
 
- <p class="notice"><%= notice %></p>
+  <div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+        <div class="container-float well">
+           <a href= "#" class="brand"><strong>ramcasa</strong></a>
+            <ul class='nav pull-right'>
+              <span> <li><a href="#"><%= link_to "All statuses", statuses_path %></a></li></span>
+
+              <% if user_signed_in? %>
+               <span><li></li></span>
+               <span><li><%= link_to "Logout", logout_path %></a></li></span>
+              
+              <% else %>
+              <span><li><%= link_to "Register", register_path %></li></span>
+              <span><li><%= link_to "Log in", login_path %></li></span>
+
+              <% end %>
+
+             </ul>
+        </div>
+      </div>
+   </div> 
+   
+   <div class="container">
+    <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
-</body>
+       <%= yield %>
+    </div>
+</body> 
 </html>

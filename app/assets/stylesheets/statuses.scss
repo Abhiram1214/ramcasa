@@ -1,0 +1,53 @@
+// Place all the styles related to the statuses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.status{
+  border-bottom:solid 1px #ccc;
+  padding:5px 0;
+}
+
+.status p{
+	margin: 4px 0;
+}
+
+.brand{
+	
+	font-size:22px;	
+}
+
+.nav{
+	
+	margin-top:5px;
+}
+ul li{
+	display:inline;
+}
+
+.status .admin{
+
+}
+
+.status p{
+	color:#89E051;	
+}
+
+#para{
+	color:#701516;	
+}
+
+.status.hover {
+	background: #FAFAFA;
+}
+
+.status.hover .admin{
+	display:inline;
+}
+
+.btn-success{
+    
+	width:85px;
+}
+.btn2 .btn-success{
+	width:130px;
+ }

@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h2><%=@user%> Statuses</h2>
+</div>
+
+<% @statuses.each do |status| %>
+  <div class="status">
+      <p id="para"><strong><%= link_to status.user.first_name,profile_path(status.user) %> <%= status.user.last_name %></strong></p>
+      <p><%= status.context %></p>
+
+      <div class="meta">
+         <%= link_to time_ago_in_words(status.created_at)+ " ago", status %>
+
+         <span class="admin">
+            | <%= link_to "Edit", edit_status_path(status) %> |
+           <%= link_to "Delete", status,method: :delete,data: { confirm: "Are you sure" } %>
+         </span>
+      </div>
+  </div><br>
+ 
+<% end %>
+
+ <%= link_to "Post", new_status_path, class: "btn btn-success"%>
