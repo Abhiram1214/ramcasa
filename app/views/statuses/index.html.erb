@@ -4,7 +4,7 @@
 
 <% @statuses.each do |status| %>
   <div class="status">
-      <p id="para"><strong><%= link_to status.user.first_name,profile_path(status.user) %> <%= status.user.last_name %></strong></p>
+      <p id="para"><strong><%= link_to status.user.full_name,profile_path(status.user) %> </strong></p>
       <p><%= status.context %></p>
 
       <div class="meta">

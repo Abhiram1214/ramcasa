@@ -3,6 +3,13 @@
     <h3><strong><u><%= @profile.first_name%></u></strong></h3>
 </div>
 
+<br />
+   <div class="row">
+      <%= link_to "Add friend", profiles_follow_path(id: @profile.id) %>	
+    </div>
+<br />
+
+
 <div class="row">
     
     <% @status.each do |status|%>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do 
-
-  resources :statuses
+root to: "statuses#index"
+  #resources :statuses
 
  resources :statuses
   devise_for :users
@@ -11,10 +11,12 @@ Rails.application.routes.draw do
       get 'logout', to: 'devise/sessions#destroy', as: :logout
     end
   
-  resources :profiles
-  root to: "statuses#index"
-
+ 
   
+
+  get 'profiles/follow'
+   resources :profiles
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

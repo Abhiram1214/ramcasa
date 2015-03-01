@@ -25,19 +25,20 @@ ul li{
 }
 
 .status .admin{
-
+    display:none
 }
+
 
 .status p{
 	color:#89E051;	
 }
 
 #para{
-	color:#701516;	
+	
 }
 
-.status.hover {
-	background: #FAFAFA;
+.status #para:hover {
+	color:#701516;	
 }
 
 .status.hover .admin{
